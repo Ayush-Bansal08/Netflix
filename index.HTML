@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India – Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+     <div id="cursor"> </div>
+     <h1>
+       <img src="https://www.freepnglogos.com/uploads/netflix-logo-0.png" alt="netflix-logo-0" style="width: 160px;height: 55px;position: absolute; left: 40px;">
+    </h1>
+    <button id="SignIn" style="position: absolute; left: 1150px; top: 30px;width:80px;height: 40px;border-radius: 40px;"> Sign In</button>
+       <img src="https://singh-cp.github.io/netflix-landingpage/images/netflix-background-image.jpg" alt="netflix-logo-0" style="position: absolute; left: 50px; top: 140px;width: 1175px;height: 500px ; border-radius: 50px;filter: brightness(1); position: absolute; 
+       left: 84px; 
+       top: 140px;
+       width: 1175px;
+       height: 500px;
+       border-radius: 80px;
+       filter: brightness(0.8);
+       transform: perspective(1000px) rotateX(10deg) rotateY(5deg); /* 3D rotation */
+       box-shadow: 8px 20px 40px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+       transition: transform 0.5s, box-shadow 0.5s; /* Smooth transition effect */">
+       <h2>
+
+        <button id="button" style="position: absolute; left: 445px; top: 80px;height: 50px;border-radius: 40px;color: black;">Popular Now</button>
+            <button id="button" style="position: absolute; left: 545px;top: 80px ;height: 50px;border-radius: 40px ; width: 80px;">Plans</button>
+            <button id="button" style="position: absolute; left: 635px;top: 80px ;height: 50px;border-radius: 40px">Reason to join</button>
+            <button id="button" style="position: absolute;left: 745px;top: 80px ; height: 50px;border-radius: 40px ;width: 70px; ;">FAQ</button>
+
+        </h2>
+       <div class="text">
+        <span style="width: 500px; align-content: center;">Unlimited movies,TV shows and more!!</span>
+        <!-- <span></span>
+        <span></span> -->
+       </div>
+       <div id="box">
+        <h3 style=" font: 1500; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size:x-large;">Sign In</h3>
+          <input type="text" id="username" placeholder="Email Id or Username">
+          <input type="password" id="Password" placeholder="Password">
+          <button id="Forgot" style="background-color: black;border-color: black;color: white;font-size: small;b;margin: bottom 15px;margin-bottom: 20px;">Forgot password?</button>
+          <button id="Submit" style="background-color: red;font: bold; border-color: black; width: 90%;height: 10%;color: white; font-size: medium;border-color: red;border-radius: 10px;" >Submit</button>
+          <button id="home" style="background-color: red;border-color: red;color: white;margin-top: 20px;text-align: left;"><-Home page</button>
+       </div>
+       <div id="box1">
+        <h4>Under construction🚧</h4>
+        <button id="Home">Home page</button>
+       </div>
+     
+</body>
+    <script>
+       const cursor = document.querySelector("#cursor")
+        const random = function(){
+            let colour = "#"
+            const hex = "0123456789ABCDEF"
+            for(let i = 0 ; i < 6 ; i++ ){
+                colour = colour + hex[Math.floor(Math.random()*16)]
+            }
+            return colour 
+        }
+         
+        document.addEventListener("mousemove",function(e){
+            mousemove(e.pageX,e.pageY)
+        })
+
+        const mousemove = function(pageX,pageY){
+            cursor.style.top = pageY + "px"
+            cursor.style.left = pageX + "px"
+            
+            cursor.style.backgroundColor = random()
+        }
+        // for sign in block
+     
+        const SignIn = document.querySelector("#SignIn")
+        const box = document.querySelector("#box")
+        SignIn.addEventListener("click",function(){
+             box.style.display = "block"
+        }) 
+
+        const home = document.querySelector("#home")
+        home.addEventListener("click",function(){
+            box.style.display = "none"
+        })
+
+        // popular now 
+        const button = document.querySelector("#button") 
+        button.addEventListener("click",function(){
+            box1.style.display ="block"
+        })
+        const Home = document.querySelector('#Home')
+        Home.addEventListener("click",function(){
+            box1.style.display = "none" 
+        })
+
+
+</script>
+
+
+</html>
