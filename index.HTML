@@ -39,15 +39,25 @@
         <h3 style=" font: 1500; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size:x-large;">Sign In</h3>
           <input type="text" id="username" placeholder="Email Id or Username">
           <input type="password" id="Password" placeholder="Password">
-          <button id="Forgot" style="background-color: black;border-color: black;color: white;font-size: small;b;margin: bottom 15px;margin-bottom: 20px;">Forgot password?</button>
+          <button id="Forgot" style="background-color: black;border-color: black;color: white;font-size: small;b;margin: bottom 15px;margin-bottom: 20px; text-align:center;">Forgot password?</button>
           <button id="Submit" style="background-color: red;font: bold; border-color: black; width: 90%;height: 10%;color: white; font-size: medium;border-color: red;border-radius: 10px;" >Submit</button>
-          <button id="home" style="background-color: red;border-color: red;color: white;margin-top: 20px;text-align: left;"><-Home page</button>
+          <button id="home" style="background-color: red;border-color: red;color: white;margin-top: 20px;text-align: left;">Home page</button>
        </div>
        <div id="box1">
         <h4>Under construction🚧</h4>
         <button id="Home">Home page</button>
        </div>
-     
+
+       <!-- // forgot pass box(fbox) -->
+       <div id="fbox">
+         <h5 style="color: white;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: large;">Create new Password!</h5>
+         <input type="text" placeholder="New Password" id="Npassword" style="width: 300px;margin-bottom: 30px;background-color: black;color: white;height: 30px;border-color: white;">
+         <input type="text" placeholder="Confirm Password" id="Cpassword" style="width: 300px;margin-bottom: 20px;background-color: black;color: white;height: 30px;align-self: center;border-color:white;margin-bottom: 30px;">
+          <button id ="Confirm" style="background-color: red;color: white;margin-top: 30px; padding: 7px;margin-right: 20px;">Confirm</button>
+         <button id="fhome" style="background-color: red;color: white; padding: 7px;">Home page</button> 
+       </div>
+       
+
 </body>
     <script>
        const cursor = document.querySelector("#cursor")
@@ -92,8 +102,34 @@
         Home.addEventListener("click",function(){
             box1.style.display = "none" 
         })
+          
+        const forgot = document.querySelector("#Forgot")
+        const fbox = document.querySelector("#fbox")
+        forgot.addEventListener("click",function(){
+            fbox.style.display = "block"
+            box.style.display = "none"
+        })
 
+        const confirm = document.querySelector("#Confirm")
+        confirm.addEventListener("click",function(){
+            const Npassword = document.querySelector("#Npassword")
+            const Cpassword = document.querySelector("#Cpassword")
+            if(Npassword.value===Cpassword.value){
+            alert("Your password has been reset")
+             fbox.style.display = "none"
+            }
+             else if(Npassword.value != Cpassword.value){
+                alert("Please enter the password carefully!")
+            }
+            else if(Npassword.value === ""){
+                alert("The password cannot be blank!!")
+            }
+        })
 
+        const fhome = document.querySelector("#fhome")
+        fhome.addEventListener("click",function(){
+            fbox.style.display = "none"
+        })
 </script>
 
 

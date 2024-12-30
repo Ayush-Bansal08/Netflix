@@ -22,7 +22,6 @@ div#cursor {
   position: relative;
   display: flex;
   justify-content:center;
-  /* flex-direction: column; */
   top: 300px;
   left: 420px;
   font-weight: 2000;
@@ -33,22 +32,18 @@ div#cursor {
 }
 
 #box{
-
-  position: relative; /* or absolute/fixed based on your layout */
-  z-index: 10; /* Ensures it's on top of the background  it only works if posiiton is set*/
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
-  padding: 20px; /* Adds spacing inside the box */
-  border-radius: 10px; /* Rounds the corners */
-  color: white; /* Makes text readable */
-  width: 450px; /* Adjust the size as needed */
-  margin: auto; /* Centers the box */
+  position: relative; 
+  z-index: 10; 
+  background-color: rgba(0, 0, 0, 0.8); 
+  padding: 20px; 
+  border-radius: 10px; 
+  color: white; 
+  width: 350px; 
+  margin: auto; 
   display: none;
-  height: 400px;
-  text-align: center;
+  height: 350px;
   margin-bottom: auto;
   cursor: pointer;
-  justify-content: center;
-  align-items: center;
 
 }
 
@@ -66,14 +61,14 @@ div#cursor {
  align-items: center;
  left: 500px;
  justify-content: center;
-  align-items: center;
+ align-items: center;
 
 }
 
 #box1{
   display: none;
-  position: relative; /* or absolute/fixed based on your layout */
-  background-color: black;
+  position: relative; 
+  background-color: rgba(0, 0, 0, 0.8); 
   font-size: medium;
   color: white;
   padding: 20px;
@@ -82,5 +77,16 @@ div#cursor {
   margin: auto;
   
 }
-#box2
+#fbox{
+  display: none;
+  position: relative;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8); 
+  width: 25%;
+  margin: auto;
+  text-align: center;
+  height: 400px;
+  flex-direction: column;
+  height: 35%;
+}
 
