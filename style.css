@@ -89,4 +89,12 @@ div#cursor {
   flex-direction: column;
   height: 35%;
 }
-
+ 
+#secondsection{
+  height: 500vh;
+  padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    background-color: black;
+}
