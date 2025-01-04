@@ -13,7 +13,15 @@ div#cursor {
     background-color: black;
     background: url("photo.jpg");
     z-index: 0;
+    /* height: 5000px; */
 }
+#section1{
+  background: url("photo.jpg");
+  z-index: 0;
+  height: 120vh;
+}
+
+
 .text{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
@@ -90,11 +98,20 @@ div#cursor {
   height: 35%;
 }
  
-#secondsection{
-  height: 500vh;
+#section2{
+  height: 120vh;
   padding: 20px;
     box-sizing: border-box;
     color: white;
     text-align: center;
     background-color: black;
+    /* background-image: url(https://wallpaperaccess.com/full/2114704.jpg); */
+    top: 1000px;
+    filter: brightness(1);
 }
+
+#section3{
+  height: 150vh;
+  background-color: rgb(0, 0, 0);
+}
+
